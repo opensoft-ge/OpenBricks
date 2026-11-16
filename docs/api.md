@@ -16,3 +16,7 @@ Import language is PYTHON, SQL, SCALA or R. Format defaults to SOURCE; overwrite
 Unsupported formats, directory exports, file/library operations, direct_download and modified-since listing fail explicitly. Recursive deletion is atomic locally, a documented difference from Databricks. No jobs, clusters or notebook execution endpoints are advertised.
 
 `GET /api/2.0/workspace/export?path=/book&direct_download=true` returns exact decoded source bytes as an `application/octet-stream` attachment named `notebook.txt`. Omitted or `false` returns the existing base64 JSON. Only lowercase `true`/`false` are accepted; repeated/unknown options fail. SOURCE-only, notebook-only, tenant and authentication boundaries remain in force. No format conversion, directory archives or size-limit expansion.
+
+## AI product direction
+
+Requirement added 2026-11-16: OpenBricks must become fully AI enabled, agentic and conversational across its core journeys. The [AI capability and acceptance guide](ai-capabilities.md) defines the required work and evidence. This direction does not change the implementation scope or historical validation results recorded above.
